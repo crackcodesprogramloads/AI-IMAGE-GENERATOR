@@ -1,6 +1,8 @@
 import * as dotenv from "dotenv";
 dotenv.config();
 
+const PORT = process.env.PORT || 3000;
+
 import { Configuration, OpenAIApi } from "openai";
 
 const configuration = new Configuration({
@@ -36,6 +38,6 @@ app.post("/dream", async (req, res) => {
   }
 });
 
-app.listen(8080, () =>
+app.listen(3000, () =>
   console.log("make art on https://transcendent-melba-6ea4a3.netlify.app/dream")
 );
